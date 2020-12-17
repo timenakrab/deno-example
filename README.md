@@ -5,5 +5,5 @@
 https://deno.land/x/denon
 
 ```sh
-deno run --allow-env --allow-read --allow-net server.ts
+denon run --allow-env --allow-read --allow-net server.ts
 ```
