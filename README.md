@@ -2,8 +2,8 @@
 
 ## install denon same same nodemon
 
-https://deno.land/x/denon@2.4.5
+https://deno.land/x/denon
 
 ```sh
-denon run --allow-net server.ts
+deno run --allow-env --allow-read --allow-net server.ts
 ```
