@@ -6,9 +6,14 @@ import router from "./route.ts";
 const app = new Application();
 const { PORT } = config({ safe: true });
 
+app.addEventListener("listen", ({ hostname, port, secure }) => {
+  console.log(
+    `Listening on: ${secure ? "https://" : "http://"}${hostname ??
+      "localhost"}:${port}`,
+  );
+});
+
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-console.log(`Server running on port ${PORT}`);
-
-app.listen({ port: Number(PORT) });
+await app.listen({ port: Number(PORT) });
