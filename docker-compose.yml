@@ -8,4 +8,4 @@ services:
     ports:
       - "5050:5050"
     working_dir: /opt
-    command: deno run --allow-env --allow-read --allow-net /opt/server.ts
+    command: deno run --allow-env --allow-read --allow-net server.ts
