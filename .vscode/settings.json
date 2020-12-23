@@ -10,5 +10,7 @@
   "deno.unstable": false,
   "deno.import_intellisense_origins": {
     "https://deno.land": true
-  }
+  },
+  "typescript.preferences.quoteStyle": "double",
+  "javascript.preferences.quoteStyle": "double"
 }

@@ -7,10 +7,9 @@ const app = new Application();
 const { PORT } = config({ safe: true });
 
 app.addEventListener("listen", ({ hostname, port, secure }) => {
-  console.log(
-    `Listening on: ${secure ? "https://" : "http://"}${hostname ??
-      "localhost"}:${port}`,
-  );
+  const sec = secure ? "https://" : "http://";
+  const host = hostname ?? "localhost";
+  console.log(`Listening on: ${sec}${host}:${port}`);
 });
 
 app.use(router.routes());
